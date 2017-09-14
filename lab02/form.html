@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Select Lists</title>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <form name="select example" action="#" method="get">
+            <tr>
+            <td>Drink Type:<br></td>
+                <td>
+                <input type="radio" name="drinktype" value="drinktypeAmericano">Americano<br>
+                <input type="radio" name="drinktype" value="drinktypeCuppuccino">Cuppuccino<br>
+                <input type="radio" name="drinktype" value="drinktypeLatte">Latte<br>
+                <input type="radio" name="drinktype" value="drinktypeMacchiato">Macchiato<br>
+                <input type="radio" name="drinktype" value="drinktypeMocha">Mocha<br>
+                </td>
+            </tr>
+            <p><tr>
+                <td>Size</td><br>
+                </tr><select name="color">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+            
+            </p>
+            <tr>
+                <td>Flavors and Extras:</td><br>
+                    <td>
+                        <input type="checkbox" name="ExtraEspressoShot" value="ExtraEspressoShot">Extra Espresso Shot<br>
+                        <input type="checkbox" name="CaramelShot" value="CaramelShot">Caramel Shot<br>
+                        <input type="checkbox" name="HazelnutShot" value="HazelnutShot">Hazelnut Shot<br>
+                        <input type="checkbox" name="VanillaShot" value="VanillaShot">Vanilla Shot<br>
+                    </td>
+            </tr>
+            <p><tr>
+                <td>Order For (name): <input type="text" name="name"></td>
+            </tr></p>
+            <pr><input type="button" class="order" value="Order!"></pr>
+        </form>
+    </body>
+</html>
