@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 4</title>
+    </head>
+    <body>
+        <script>
+            function showValues() {
+                var firstName;
+                var band;
+                var number; 
+                var color;
+                
+                firstName = document.getElementById("fn").value;
+                
+                band = document.getElementById("b").value;
+                
+                number = document.story.number.value;
+                
+                color = document.getElementById("col").value;
+                
+                
+                document.getElementById("tellstory").innerHTML = "Hello, my name is " + firstName + "!" + " My favorite band is " + band + ", my favorite number is " + number + " and I like " + color + ".";
+            }
+        </script>
+        <form name="story" id="TellStory" action="#" method="get">
+            <p>Name: <input type="text" name="firstName" id="fn"></p>
+            <p>Favorite Band: <input type="text" name="favoriteband" id="b"></p>
+            <p>Favorite Number:<br>
+                    <input type="radio" name="number" value="1" id="number1">1<br>
+                    <input type="radio" name="number" value="2" id="number2">2<br>
+                    <input type="radio" name="number" value="3" id="number3">3<br>
+                    <input type="radio" name="number" value="4" id="number4">4 
+            </p>
+            <p>Favorite Color:
+                <select name="color" id="col">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                </select></p>
+            <p><input type="button" name="go" id="go" value="Tell Story!" onclick="showValues();"></p>
+        </form>
+        <hr>
+        <p id="tellstory"></p>
+    </body>
+</html>
