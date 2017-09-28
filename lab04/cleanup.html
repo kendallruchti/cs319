@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Lab 4</title>
+    </head>
+    <body>
+        <h1>Name Cleanup</h1>
+          
+        <form name="cleanUp" id="NameCleanup" action="#" method="get">
+            <p>First Name: <br> <input type="text" name="firstName" id="fn"></p>
+            <p>Middle Initial: <br> <input type="text" name="middleName" id="mn"></p>
+            <p>Last Name: <br> <input type="text" name="lastName" id="ln"></p>
+               
+              <p><input type="button" name="go" id="go" value="Cleanup Name" onclick="showName();"></p>
+              
+            <p>Full Name: <br> <input type="text" name="fullName" id="fulln"></p>
+        </form>
+        
+        <script>
+            function showName() {
+                var firstName= document.getElementById("fn").value;
+                var middleName= document.getElementById("mn").value;
+                var lastName= document.getElementById("ln").value;
+                var fullName= document.getElementById("fulln").value;
+                
+                firstName = document.getElementById("fn").value;
+                    firstName= firstName.toUpperCase();
+                    firstName= firstName.trim();
+                middleName = document.getElementById("mn").value;
+                    middleName= middleName.toUpperCase();
+                    middleName= middleName.trim();
+                lastName = document.getElementById("ln").value;
+                    lastName= lastName.toUpperCase();
+                    lastName= lastName.trim();
+                fullName = firstName + " " + middleName + " " + lastName; document.cleanUp.fullName.value = fullName;
+            }                      
+        </script>
+    </body>
+</html>
