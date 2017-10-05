@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Lab 4</title>
+    </head>
+    <body>
+        <h1>Temperature Converter 2.0</h1>
+         <script>
+            function tempConvert() {
+                var f;
+                var c;
+                
+               if (document.getElementById("f2c").checked == true) {
+                   f = parseFloat(document.getElementById("f").value);
+                   c = ((f - 32) * (5/9));
+                    document.temp.celsius.value = c;
+                    document.temp.celsius.style.backgroundColor="lightGreen";
+                   //return true;
+                
+               } if (document.getElementById("c2f").checked == true) {
+                   c = parseFloat(document.getElementById("ct").value);
+                   f = ((c * (9/5)) + 32);
+                    document.temp.fahrenheit.value = f;
+                    document.temp.fahrenheit.style.backgroundColor="lightGreen";
+                   //return true;
+               }
+            }
+             
+        </script>
+        
+        <form name="temp" id="tc" action="#" method="get">
+            <p>Temperature in Fahrenheit: <br> <input type="text" name="fahrenheit" id="f"></p>
+            <p><input type="radio" name="conversion" id="f2c" value="F to C"> F to C</p>
+            <p><input type="radio" name="conversion" id="c2f" value="C to F"> C to F</p>
+            <p>Temperature in Celsius: <br> <input type="text" name="celsius" id="ct"></p>
+        <p><input type="button" name="btnConvert" id="btnConvert" value="Convert" onclick="tempConvert();">
+        </form>
+    
+    </body>
+</html>
+
+          <!--function ftoc() {
+              var fahrenheit;
+              var celsius;
+              
+              fahrenheit = parseFloat(document.temp.fahrenheit.value);
+              celsius = (fahrenheit - 32) * (5/9);
+              document.temp.celsius.value = celsius;
+              document.temp.celsius.style.backgroundColor = "lightgreen";
+
+          }  
+             
+        function ctof() {
+            var fahrenheit;
+            var celsius;
+              
+              celsius = parseFloat(document.temp.celsius.value);
+              fahrenheit = (celsius - 9/5) + (32);
+              document.temp.fahrenheit.value = fahrenheit;
+                document.temp.fahrenheit.style.backgroundColor = "lightgreen"; 
+
+        } -->
