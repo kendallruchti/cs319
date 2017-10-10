@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+     <title>Exercise 6</title>
+</head>
+    <body>
+        <script>
+            function showNumber() {
+                var numbertoguess;
+                var input;
+                
+                numbertoguess = 6;
+                input = document.numberGuess.guessnum.value;
+                input = input.trim();
+                    
+                    if (input == "") {
+                    alert("Please enter a number.");
+                    document.numberGuess.number.focus();
+                    return false;
+                    }
+                        
+                        else if (isNaN(input) == true) {
+                        alert("Please enter a number.");
+                        document.numberGuess.number.select();
+                        return false;
+                       
+                        } else if (input<1) {
+                        alert("Please enter a value between 1 and 10.");
+                        document.numberGuess.number.select();
+                        return false;
+                        }
+                            
+                        else if (input>10) {
+                        alert("Please enter a value between 1 and 10.");
+                        input.select();
+                        document.numberGuess.number.select();
+                        return false;
+                        }
+                        
+                        else if (input < numbertoguess) {
+                        alert("Nice try! Guess a higher number.");
+                        document.numberGuess.number.select();
+                        return false;
+                    }
+                    
+                        else if (input > numbertoguess) {
+                        alert("Nice try! Guess a lower number.");
+                        document.numberGuess.number.select();
+                        return false;
+                    }
+                    
+                        else if (input == numbertoguess) {
+                        alert("You've guessed correctly!");
+                        return true;  
+                    }
+            }
+            
+        </script>
+        <form name="numberGuess" id="numberGuess" action="#" method="get" onsubmit="return showNumber()">
+            <p>Guess the Number: <input type="text" name="guessnum" id="guessnum"></p>
+            <p><input type="submit" name="submit" id="submit" value="Submit" ></p>
+        </form>
+    </body>
+</html>
