@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Quiz 6</title>
+    </head>
+    <body>
+        <script>
+            function favColor() {
+                var color;
+                color = document.question.favcolor;
+                
+                if (isNaN(color.value) == false) {
+                    alert("Your input is invalid.");
+                    color.select();
+                    return false;
+                }
+                
+                else {
+                    return true;
+                }
+            }   
+        </script>
+        <form name="question" id="question" action="#" method="get" onsubmit="favColor();">
+            <p>What is your favorite color? <input type="text" name="favcolor" id="color"></p>
+            <input type="submit" name="submit" id="submit" Value="Submit">
+        </form>
+    </body> 
+</html>
